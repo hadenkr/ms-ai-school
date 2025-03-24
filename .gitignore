@@ -11,3 +11,6 @@ wheels/
 
 # Data directory
 data/
+
+# VS Code workspace file
+*.code-workspace
