@@ -1,0 +1,9 @@
+{
+  "vr_endpoint": "https://[YOUR_HOST_NAME].cognitiveservices.azure.com/computervision/",
+  "vr_api_key": "[YOUR_API_KEY]",
+  "vr_api_model": "retrieval/indexes/",
+  "vr_api_version": "2023-05-01-preview",
+  "vr_index_name": "6b018-news3",
+  "vr_sas_url": "[YOUR_SAS_URL]",
+  "vr_sas_token": "[YOUR_SAS_TOKEN]"
+}
