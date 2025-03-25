@@ -1,5 +1,5 @@
 {
-  "cv_endpoint": "https://[YOUR_HOST_NAME].cognitiveservices.azure.com/computervision/",
+  "cv_endpoint": "https://[YOUR_HOST_NAME].cognitiveservices.azure.com/computervision",
   "cv_api_key": "[YOUR_API_KEY]",
   "cv_api_model": "imageanalysis:analyze",
   "cv_api_version": "2024-02-01"
