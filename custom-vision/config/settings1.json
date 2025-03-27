@@ -1,0 +1,9 @@
+{
+  "train_endpoint": "https://[YOUR_TRAIN_HOST_NAME].cognitiveservices.azure.com/",
+  "train_api_key": "[YOUR_TRAIN_API_KEY]",
+  "prediction_endpoint": "https://[YOUR_PREDICTION_HOST_NAME].cognitiveservices.azure.com/",
+  "prediction_api_key": "[YOUR_PREDICTION_API_KEY]",
+  "prediction_resource_id": "[YOUR_RESOURCE_ID]",
+  "test_url_fork": "https://metamandate.com/wp-content/uploads/featured-fork-parts.jpg",
+  "test_url_scissors": "https://m.media-amazon.com/images/I/61ANih8F+jL._AC_SX300_SY300_.jpg"
+}
