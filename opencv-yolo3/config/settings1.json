@@ -1,4 +1,10 @@
 {
   "sample1": "[YOUR_SAMPLE_IMAGE_FILE]",
-  "sample2": "[YOUR_SAMPLE_IMAGE_FILE]"
+  "sample2": "[YOUR_SAMPLE_IMAGE_FILE]",
+  "openai_endpoint": "[YOUR_OPENAI_ENDPOINT]",
+  "openai_api_key": "[YOUR_OPENAI_API_KEY]",
+  "openai_api_version": "2025-01-01-preview",
+  "deployment_name": "gpt-4o",
+  "speech_endpoint": "[YOUR_SPEECH_ENDPOINT]",
+  "speech_api_key": "[YOUR_SPEECH_API_KEY]"
 }
