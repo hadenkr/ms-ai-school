@@ -10,6 +10,6 @@ def index():
 def admin(name: str):
     return render_template('index.html', title='나의 홈페이지', username=name)
 
-@bp.route('/hello/')
-def hello():
-    return 'Hello page'
+@bp.route('/hello/<name>/<int:n>')
+def hello(name: str, n: int):
+    return render_template('hello.html', username=name, repeat=n)
