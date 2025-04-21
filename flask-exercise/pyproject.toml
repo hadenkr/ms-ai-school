@@ -1,0 +1,12 @@
+[project]
+name = "flask-exercise"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12.9"
+dependencies = [
+    "flask-migrate>=4.1.0",
+    "pip>=25.0.1",
+    "python-dotenv>=1.1.0",
+    "sqlalchemy-utils>=0.41.2",
+]
