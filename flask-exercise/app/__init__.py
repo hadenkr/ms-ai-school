@@ -1,10 +1,43 @@
+import os
+import logging
+from logging.handlers import RotatingFileHandler
 from flask import Flask
-from .views import main_view, auth_view, board_view
+import config
 
-app = Flask(__name__)
-app.register_blueprint(main_view.bp)
-app.register_blueprint(auth_view.bp)
-app.register_blueprint(board_view.bp)
+from flask import Flask
+from app.database import db, migrate
+
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object(config)
+    
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+    from app import models
+    from .views import main_view, auth_view, board_view, sql_view
+
+    app.register_blueprint(main_view.bp)
+    app.register_blueprint(auth_view.bp)
+    app.register_blueprint(board_view.bp)
+    app.register_blueprint(sql_view.bp)
+
+    LOG_DIR = 'logs'
+    if not os.path.exists(LOG_DIR):
+        os.makedirs(LOG_DIR)
+    
+    file_handler = RotatingFileHandler(os.path.join(LOG_DIR, 'app.log'), maxBytes=10240, backupCount=10, encoding='utf-8')
+
+    log_level = logging.DEBUG if app.debug else logging.INFO
+
+    file_handler.setLevel(log_level)
+    file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+
+    app.logger.addHandler(file_handler)
+    app.logger.setLevel(log_level)
+    app.logger.info('flask app started')
+
+    return app
 
 # @app.route('/')
 # @app.route('/home/')
